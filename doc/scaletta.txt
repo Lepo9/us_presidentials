@@ -1,0 +1,5 @@
+Voti medi ai partiti per ogni stato
+
+Elenco degli esponenti di un partito in uno stato negli anni
+
+Numero di canditati medi per anno per stato
