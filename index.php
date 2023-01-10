@@ -3,6 +3,7 @@
 
 //Questa serve per il caricamento delle librerie
 require 'vendor/autoload.php';
+require 'conf/config.php';
 
 //L'oggetto che poi si occuperà di gestire il template
 $templates = new League\Plates\Engine('templates', 'tpl');

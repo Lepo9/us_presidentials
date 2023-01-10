@@ -3,6 +3,7 @@
 
 //Questa serve per il caricamento delle librerie
 require 'vendor/autoload.php';
+require 'conf/config.php';
 
 //L'oggetto che poi si occuperà di gestire il template
 $templates = new League\Plates\Engine('templates', 'tpl');
@@ -13,10 +14,10 @@ $templates = new League\Plates\Engine('templates', 'tpl');
 
 $state = $_GET['state'];
 
-$dsn = 'mysql:host=localhost;dbname=us_presidential_election';
+$dsn = 'mysql:host='. DB_HOST . ';dbname=' . DB_NAME;
 
 //Creazione della connessione
-$pdo = new PDO($dsn, 'root', '');
+$pdo = new PDO($dsn, DB_USERNAME, DB_PASSWORD);
 
 $stmt = $pdo->query('SELECT DISTINCT year FROM election_data');
 $list = $stmt->fetchAll();
